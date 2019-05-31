@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+  .container{
+    background: #FFB6C1; 
+  }
+  input::-webkit-input-placeholder {
+color: #F5D0A9 !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: #F5D0A9 !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #F5D0A9 !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: #F5D0A9 !important;  
+}
+h1.head{
+  text-align: center;
+  color:#9932CC;
+}
+
+
+  </style>
+  <script src="proverkaregistr.js"></script>
+
+    
+
+</head>
+<body>
+  <br><br>
+  <div class="container">
+    <h1 class="head">Форма регистрации</h1><br>
+    <div class="row">
+
+        
+        
+        <div class="col-3">
+              <img src="css/images/regist1.jpg">
+    </div>
+          <div class="col-5">
+        <form class="form-horizontal" name="fm" onSubmit="valid_fm(); return(false);" action="/add_user" method="post" >
+           <div class="form-group">
+            <label for="login" class="col-sm-4 control-label">Логин *</label>
+            <div class="col-sm-8">
+            <input type="text" class="form-control" id="login" name="login" autocomplete="off"  placeholder="Не менее 8 символов">
+          </div>
+        </div>
+        <div class="form-group">
+  <label for="password" class="col-sm-4 control-label">Пароль *</label>
+  <div class="col-sm-8">
+   <input type="password" class="form-control" id="pass" name="password" placeholder="Пароль">
+  </div>
+ </div>
+
+<div class="form-group">
+  <label for="password1" class="col-sm-6 control-label">Подтверждение пароля *</label>
+  <div class="col-sm-8">
+   <input type="password" class="form-control" id="pass1" name="password1" placeholder="Пароль еще раз">
+  </div>
+ </div>
+
+ <div class="form-group">
+  <label for="mail" class="col-sm-4 control-label">Email *</label>
+  <div class="col-sm-8">
+   <input type="email" class="form-control" id="mail" name="mail" placeholder="Email">
+  </div>
+ </div>
+
+
+
+ <div class="form-group">
+  <div class="col-sm-offset-4 col-sm-8">
+   <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+  </div>
+ </div>
+</form>
+<p class="p">* Отмечены поля, обязательные к заполнению</p>
+</div>
+       <div class="col-4">
+        <img src="css/images/regist.jpg">
+       </div>
+    </div>
+
+     
+
+
+
+
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html ng-app="myApp" >  <!-- -->
+<head>
+  <meta charset="UTF-8">
+  <title>Леонардо Дикаприо</title>
+  <link rel="stylesheet" href="css/stylemain.css" type="text/css">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+  <div ng-controller="mainCtrl">
+    <header>
+      <h1>ВСЁ ПРО НАШЕГО ЛЮБИМОГО ЛЕО</h1> 
+      <h3>Клуб поклонников творчества и актерских работ <br>Леонардо Ди Каприо </h3>
+      <div class="text-center">
+        <a href="vhod.html" id="reg"> <button class="btn btn-info btn-lg">Вход</button></a>
+        <a href="regis.html" id="reg1"> <button class="btn btn-info btn-lg">Регистрация</button>
+     </a>
+        <a href="vsePolzovateli.html" id="reg2"> <button class="btn btn-warning btn-lg">Все пользователи</button></a>
+
+   </div>
+   </header>
+
+   <div class="container">
+
+
+
+    <div class="row">
+      <div class="col">
+       <img class="img-responsive center-block" src="css/images/film.jpg">
+       <h4>Фильмы с любимым актером!</h4>
+     </div>
+
+     <div class="col">
+       <img class="img-responsive center-block" src="css/images/dik1.jpg">
+       <h4>Последние новости от актера!</h4>
+     </div>
+
+     <div class="col">
+      <img class="img-responsive center-block" src="css/images/new.jpg">
+      <h4>Новые фильмы с Leonardo</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+     <img src="css/images/forum.jpg">
+     <h4>Форум всех самых преданных фанатов</h4>
+   </div>
+
+   <div class="col">
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/rI6ptFcmMCg?start=28" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <h4>Фильмы, за которые актер был номинирован на Оскар и не только!</h4>
+   </div>
+
+
+
+   <div class="col">
+    <img class="img-responsive center-block" src="css/images/obr.jpg">
+    <h4>Обратная связь с актером!</h4>
+  </div>
+
+
+</div>
+
+<!--  футер --> 
+<footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+  <h5>ВСЕ ПРАВА ЗАЩИЩЕНЫ</h5>
+  Кравченко Татьяна Михайловна
+  По вопросам сотрудничества и с конструктивными предложениями обращаться в социальных сетях:
+  <div class="text-center">
+    <ul class="list-unstyled list-inline">
+      <li class="list-inline-item">
+
+        <a class="btn-floating btn-sm btn-fb mx-1" href="https://vk.com/id139818544">     
+          <img class="i1" src="css/images/vk.png" >           
+        </a>
+      </li>
+      <li class="list-inline-item">
+
+        <a class="btn-floating btn-sm btn-fb mx-1" href="skype:sandra_seimur939">  <img  class="i1" src="css/images/skype.png" ></a>
+      </li>
+      <li class="list-inline-item">
+
+        <a class="btn-floating btn-sm btn-fb mx-1" href="https://plus.google.com/u/0/">  <img class="i1" src="css/images/gmail.png" >
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="footer-copyright py-3 text-center">
+    © 2018
+
+  </div>
+</footer>
+
+</div>
+</div>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- BS JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+console.log("OK");
+  function getCookie(name) {
+
+        var prefix = name + "="
+        var cookieStartIndex = document.cookie.indexOf(prefix)
+        if (cookieStartIndex == -1)
+                return null
+        var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+        if (cookieEndIndex == -1)
+                cookieEndIndex = document.cookie.length
+        return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+
+$(document).ready(function() {
+  var cooks = getCookie('user');
+  console.log(cooks);
+  
+    if(cooks ==='exist')
+    {
+      document.getElementsByClassName("text-center")[0].style.display='none';
+    }
+  });
+</script>
+
+
+ <script src="js/lib/angular.min.js"></script>
+<script type="text/javascript">
+    angular.module('myApp', []);
+</script>
+<script src="js/controllers/mainCtrl.js"></script>
+</body>
+</html>

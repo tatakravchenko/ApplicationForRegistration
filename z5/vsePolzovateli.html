@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Вход</title>
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/stylemain.css" type="text/css">
+	
+</head>
+<body>
+	<div ng-controller="svedpersCtrl">
+	<br><br>
+	<div class="container">
+		<h3>Все пользователи</h3>
+		<div class="row justify-content-center">
+
+			<div class="col-4 ">
+			<table class="table table-dark" >
+				<tr >
+					<th>e-mail</th>
+					<th>login</th>
+				</tr>
+			
+				<tr ng-repeat="users in resu" >
+					<td>{{users.email}}</td>
+					<td>{{users.login}}</td>
+
+				</tr>
+				
+			</table>
+
+			</div>
+
+		</div>
+
+
+
+	</div>
+</div>
+
+<script src="js/lib/angular.min.js"></script>
+<script type="text/javascript">
+    angular.module('myApp', []);
+</script>
+<script src="js/controllers/svedpersCtrl.js"></script>
+</body>
+</html>
